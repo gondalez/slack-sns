@@ -9,9 +9,9 @@ exports.stackdriver = function (msg) {
 };
 
 var cwIcons = {
-  INSUFFICIENT_DATA: ':open_hands:',
-  OK:                ':ok_hand:',
-  ALARM:             ':wave:',
+  INSUFFICIENT_DATA: ':yellow_heart:',
+  OK:                ':green_heart:',
+  ALARM:             ':red_circle:',
 };
 exports.cloudwatch = function (msg) {
   if (msg.OldStateValue == 'INSUFFICIENT_DATA' && msg.NewStateValue == 'OK') {
