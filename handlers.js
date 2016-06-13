@@ -20,7 +20,7 @@ exports.cloudwatch = function (msg) {
 
   return {
     icon: cwIcons[msg.NewStateValue],
-    text: msg.NewStateValue === 'OK' ? 'Recovered' : msg.AlarmDescription,
+    text: msg.title,
   };
 };
 
@@ -81,7 +81,7 @@ exports.alarm = function (msg) {
       color: alarmColors[msg.type],
       title: msg.title,
       title_link: msg.metricUrl,
-      text: msg.title,
+      text: msg.message,
       image_url: msg.graphUrl
     }]
   };
