@@ -20,7 +20,7 @@ exports.cloudwatch = function (msg) {
 
   return {
     icon: cwIcons[msg.NewStateValue],
-    text: msg.NewStateValue === 'OK' ? null : msg.AlarmDescription,
+    text: msg.NewStateValue === 'OK' ? 'Recovered' : msg.AlarmDescription,
   };
 };
 
