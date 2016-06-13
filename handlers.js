@@ -81,7 +81,7 @@ exports.alarm = function (msg) {
       color: alarmColors[msg.type],
       title: msg.title,
       title_link: msg.metricUrl,
-      text: msg.message,
+      text: msg.title,
       image_url: msg.graphUrl
     }]
   };
